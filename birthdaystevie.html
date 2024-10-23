@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>happy bidet stevie</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #b31717;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url(https://i.pinimg.com/originals/3f/9c/24/3f9c24b0216a279bb09ccff562af4ca3.gif);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff4081;
+            font-size: 3em;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #ff4081;
+        }
+
+        .message {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .envelope {
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.5s;
+            margin-top: 20px;
+        }
+
+        .letter {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #f36717;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 10px;
+            width: 200px;
+            animation: fadeIn 0.5s forwards;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .photo-gallery {
+            margin-top: 30px;
+            display: none; 
+        }
+
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .photos img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .photos img:hover {
+            transform: scale(1.05);
+        }
+
+        .show-gallery-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #f36717;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block; 
+        }
+
+        .show-gallery-button:hover {
+            background-color: #e49143;
+        }
+
+        
+        .youtube-video {
+            margin-top: 20px;
+            max-width: 100%;
+            height: 315px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, My Stevie!</h1>
+        <p class="message">here’s something for you. it might not be much, but i hope it makes you smile...</p>
+
+        
+        <button class="show-gallery-button" onclick="toggleGallery()">click me</button>
+
+        
+        <h2>a letter from me</h2>
+        <img class="envelope" src="https://static.vecteezy.com/system/resources/previews/013/982/048/non_2x/pixel-art-envelope-with-heart-icon-love-letter-icon-for-8bit-game-on-white-background-vector.jpg" alt="Envelope" onclick="toggleLetter()">
+        
+        <div class="letter" id="letter">
+            <p>happy birthday, baby! i just want to remind you how important you are to me. you bring so much happiness into my life and have shown me that there’s so much more to experience. i’m really glad i met you and grateful for every moment we share.
+
+                i want to assure you that i’ll be here with you through your wins and losses, and i won’t leave your side. you inspire me to improve and be a better person, and i hope being with me brings you the same.
+                
+                enjoy your day! i love you, my stevie!</p>
+        </div>
+
+        
+        <div class="photo-gallery" id="photo-gallery">
+            <h2>memories</h2>
+            <div class="photos">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555806916018287/IMG_0534.jpg?ex=6719fdd6&is=6718ac56&hm=945ccaabd14c3f805dd03abbecb3355109e4db433d65e59bf33e99b6ba0f80f5&=&format=webp&width=351&height=468" alt="Memory 1">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555811756249202/IMG_0623.jpg?ex=6719fdd7&is=6718ac57&hm=5b669d8b2911712c8ec920e7bd0c8742652635cb8ea5b7d2d3528bab3192c33c&=&format=webp&width=351&height=468" alt="Memory 2">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555812448571482/IMG_0624.jpg?ex=6719fdd7&is=6718ac57&hm=1f4372e182890053f07d08f724cbcacd4b409ae4eb5b48c105fcbba0afe011ee&=&format=webp&width=351&height=468" alt="Memory 3">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555812888842240/IMG_0821.jpg?ex=6719fdd7&is=6718ac57&hm=8fdcd575c6750d9d801a6f7462d9370ad435c26addbcd9dd94155675e320cb3e&=&format=webp&width=663&height=468" alt="Memory 4">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555813610131488/IMG_0862.jpg?ex=6719fdd7&is=6718ac57&hm=67cf3c75544c3bf631d9fb913107df2fde3cac6d5243b80e7243311c0f74c83e&=&format=webp&width=624&height=468" alt="Memory 5">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555814256316416/IMG_0914.jpg?ex=6719fdd8&is=6718ac58&hm=a16b1e82a36ecfa10141ef30d5bc5750807f0eb0125360dc1c713005de77d787&=&format=webp&width=624&height=468" alt="Memory 6">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555814768017458/IMG_0939.jpg?ex=6719fdd8&is=6718ac58&hm=891319af290a7ae8b80a65d7c7a1a4dd168710fccd34a019c076acc5b216c7f5&=&format=webp&width=396&height=468" alt="Memory 7">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555815199768576/Photo_on_10-5-24_at_3.58_AM.jpg?ex=6719fdd8&is=6718ac58&hm=ca4abcab76ab8f185ea64455fe367612ab5f5b639ef9601abdf596659c203297&=&format=webp&width=702&height=468" alt="Memory 8">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555815816593452/IMG_1033.jpg?ex=6719fdd8&is=6718ac58&hm=fa625d1101e82d9bdce9ebf25e9d46215e15d269e992e43e6b9b3bd894f1bff1&=&format=webp&width=351&height=468" alt="Memory 9">
+                <img src="https://media.discordapp.net/attachments/1096977774931083294/1298555816441286697/3_2.jpg?ex=6719fdd8&is=6718ac58&hm=5a6593b92e558386bc5da690eac7982ce658eb5b3759dd340ac1fc9688d6d678&=&format=webp&width=351&height=468" alt="Memory 10">
+            </div>
+        </div>
+
+        
+        <div class="song-button">
+            <h2>my song for you</h2>
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/AK0IBc9rJGg?autoplay=1&controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        function toggleLetter() {
+            var letter = document.getElementById('letter');
+            letter.style.display = letter.style.display === 'none' || letter.style.display === '' ? 'block' : 'none';
+        }
+
+        function toggleGallery() {
+            var gallery = document.getElementById('photo-gallery');
+            gallery.style.display = gallery.style.display === 'none' || gallery.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
